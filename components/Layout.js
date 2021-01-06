@@ -9,7 +9,7 @@ export default function Layout({ title, children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="w-screen">{children}</main>
+      <main className="w-screen font-kumbh">{children}</main>
     </div>
   );
 }

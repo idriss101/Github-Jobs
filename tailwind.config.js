@@ -14,9 +14,12 @@ module.exports = {
         },
         violet: {
           100: "#939bf4",
-          200: "#9e7f66",
+          200: "#5964E0",
         },
       },
+      backgroundImage: (theme) => ({
+        "hero-pattern-mobile": "url('/assets/mobile/bg-pattern-header.svg')",
+      }),
     },
   },
   variants: {
