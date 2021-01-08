@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        kumbh: ["Kumbh", "sans-serif"],
+        kumbh: ["Kumbh Sans"],
       },
       colors: {
         gray: {

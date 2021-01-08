@@ -9,7 +9,9 @@ export default function Layout({ title, children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="w-screen font-kumbh">{children}</main>
+      <main className="w-screen font-kumbh flex flex-col items-center justify-center">
+        {children}
+      </main>
     </div>
   );
 }

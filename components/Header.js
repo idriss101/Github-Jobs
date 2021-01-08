@@ -28,7 +28,7 @@ export default function Header() {
           />
         </div>
       </div>
-      <div className="mx-auto bg-white w-5/6 flex p-4 rounded justify-between items-center absolute top-20 left-8 right-8">
+      <div className="mx-auto bg-white w-5/6 flex p-4 rounded-lg justify-between items-center absolute top-20 left-8 right-8 ">
         <input
           type="text"
           className="font-kumbh text-lg focus:outline-none"
