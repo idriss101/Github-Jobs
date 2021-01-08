@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { InputContext } from "../context/InputProvider";
 
 export default function Header() {
-  const [input, setInput] = useState("");
-
+  const input = useContext(InputContext);
   const handleChange = (e) => {
-    setInput(e.target.value);
+    input.setInput(e.target.value);
   };
   return (
     <div className="w-full py-4  bg-hero-pattern-mobile flex flex-col relative overflow-visible">
@@ -33,7 +33,7 @@ export default function Header() {
           type="text"
           className="font-kumbh text-lg focus:outline-none"
           placeholder="Filter by title..."
-          value={input}
+          value={input.input}
           onChange={handleChange}
         />
         <div className="flex items-center">
