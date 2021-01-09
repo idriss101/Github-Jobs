@@ -5,11 +5,9 @@ import "../styles/globals.css";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <JobProvider>
-        <InputProvider>
-          <Component {...pageProps} />
-        </InputProvider>
-      </JobProvider>
+      <InputProvider>
+        <Component {...pageProps} />
+      </InputProvider>
       ;
     </>
   );
