@@ -1,16 +1,23 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { InputContext } from "../context/InputProvider";
+import { JobContext } from "../pages/index";
+
+import useSWR from "swr";
 
 export default function Header() {
   const input = useContext(InputContext);
+  const [setJobs] = useContext(JobContext);
   const handleChange = (e) => {
     input.setInput(e.target.value);
   };
+  // const url = "https://jobs.github.com/positions.json?page=1&search=web";
+  // const fetcher = (url) => fetch(url).then((res) => res.json());
+  // const { data, error } = useSWR(url, fetcher);
+
   return (
     <div className="w-full py-4  bg-hero-pattern-mobile flex flex-col relative overflow-visible">
-      <div className="flex w-full justify-around items-center mb-12 pt-4">
-        {/* <h1 className="text-white text-3xl font-bold">devjobs</h1> */}
-        <img src="/assets/desktop/logo.svg" alt="" />
+      <div className="flex w-full justify-around items-center mb-12 pt-4 ">
+        <img src="/assets/desktop/logo.svg" alt="website logo" />
         <div className="flex items-center justify-between w-1/3">
           <img
             src="/assets/desktop/icon-sun.svg"
@@ -28,7 +35,10 @@ export default function Header() {
           />
         </div>
       </div>
-      <div className="mx-auto bg-white w-5/6 flex p-4 rounded-lg justify-between items-center absolute top-20 left-8 right-8 ">
+      <form
+        className="mx-auto bg-white w-5/6 flex p-4 rounded-lg justify-between items-center absolute top-20 left-8 right-8"
+        // onSubmit={handleSubmit}
+      >
         <input
           type="text"
           className="font-kumbh text-lg focus:outline-none"
@@ -50,7 +60,7 @@ export default function Header() {
             />
           </div>
         </div>
-      </div>
+      </form>
     </div>
   );
 }

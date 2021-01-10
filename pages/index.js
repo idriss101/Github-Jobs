@@ -2,6 +2,7 @@ import React, { useState, createContext } from "react";
 import Header from "../components/Header";
 import JobList from "../components/JobList";
 import Layout from "../components/Layout";
+import useSWR from "swr";
 
 export const JobContext = createContext();
 

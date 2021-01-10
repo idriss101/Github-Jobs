@@ -7,7 +7,7 @@ export default function JobList() {
   return (
     <div className="bg-gray-100 w-full  mx-auto pt-20 flex flex-col items-center ">
       {jobs.map((job) => (
-        <Job {...job} />
+        <Job {...job} key={job.id} />
       ))}
     </div>
   );
